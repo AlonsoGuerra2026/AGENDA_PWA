@@ -1,0 +1,90 @@
+{
+  "name": "Agenda Personal & Laboral",
+  "short_name": "Mi Agenda",
+  "description": "Agenda Personal, Laboral y Estudiantil con alarmas y notificaciones en segundo plano",
+  "version": "3.0.0",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "theme_color": "#0b0e17",
+  "background_color": "#0b0e17",
+  "lang": "es",
+  "dir": "ltr",
+  "categories": ["productivity", "utilities", "lifestyle"],
+
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "./icons/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Vista de semana en móvil"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Nueva Tarea Personal",
+      "short_name": "Personal",
+      "description": "Agregar actividad personal",
+      "url": "./index.html?mode=p&action=add",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Nueva Tarea Laboral",
+      "short_name": "Laboral",
+      "description": "Agregar actividad laboral",
+      "url": "./index.html?mode=l&action=add",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Nueva Tarea Estudiantil",
+      "short_name": "Estudiantil",
+      "description": "Agregar actividad estudiantil",
+      "url": "./index.html?mode=e&action=add",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+
+  "share_target": {
+    "action": "./index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text"
+    }
+  },
+
+  "related_applications": [],
+  "prefer_related_applications": false,
+
+  "protocol_handlers": [
+    {
+      "protocol": "web+agenda",
+      "url": "./index.html?action=%s"
+    }
+  ]
+}
